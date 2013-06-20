@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>開示情報管理システム</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* ツールバー領域を確保 */
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .nav-list li, .nav-list .nav-header {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+    </style>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="/menu.html">開示情報管理システム</a>
+                <div class="nav-collapse collapse">
+                    <form class="navbar-form pull-right">
+                        <div class="input-prepend input-append">
+                            <span class="add-on"><i class="icon-user"></i></span>
+                            <span class="input-medium uneditable-input">木村 憲規 (v6x3282)</span>
+                            <button id="btnLogout" class="btn btn-primary">ログアウト</button>
+                        </div>
+                    </form>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span2">
+                <!--Sidebar content-->
+<div class="well sidebar-nav">
+    <ul class="nav nav-list">
+        <li ><a href="/menu.html">メニュー</a></li>
+        <li class="nav-header">開示情報</li>
+        <li ><a href="/category1.html">研究費開発費等</a></li>
+        <li ><a href="/category2.html">学術研究助成費</a></li>
+        <li ><a href="/category3.html">原稿執筆料等</a></li>
+        <li ><a href="/category4.html">情報提示関連費</a></li>
+        <li ><a href="/category5.html">その他の費用</a></li>
+        <li class="nav-header">データ取込み</li>
+        <li class="active"><a href="/upload.html">取込処理</a></li>
+    </ul>
+</div>
+
+            </div>
+
+            <div class="span10">
+                <!--Body content-->
+                <h3>開示情報&nbsp;取込処理</h3>
+                <hr />
+                <form class="form-horizontal" onsubmit="return false">
+                    <div class="control-group">
+                        <label class="control-label" for="txtYear">年度</label>
+                        <div class="controls">
+                            <input type="text" id="txtYear" placeholder="YYYY" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="selCategory">カテゴリー</label>
+                        <div class="controls">
+                            <select name="selCategory" id="selCategory">
+                                <option value="1">研究費開発費等</option>
+                                <option value="2">学術研究助成費</option>
+                                <option value="3">原稿執筆料等</option>
+                                <option value="4">情報提供関連費</option>
+                                <option value="5">その他の費用</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="fileExcel" class="control-label">アップロードファイル</label>
+                        <div class="controls"><input type="file" id="fileExcel" /></div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-info" id="btnUpload">アップロード</button>
+                    </div>
+                </form>
+            </div><!-- /div.span10 -->
+        </div>
+    </div><!-- /div.container-fluid -->
+
+    <!-- div.modal -->
+    <div id="modalConfirm" class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>開示情報登録</h3>
+        </div>
+        <div class="modal-body">
+            <p>以下の開示情報を登録します。</p>
+            
+            <ul>
+                <li>年度： 2013</li>
+                <li>カテゴリー： 研究費開発費等</li>
+            </ul>
+            
+            <p>登録処理を行う場合は
+            <span class="label label-info">登録</span>
+            を、中止する場合は
+            <span class="label">キャンセル</span> をクリックしてください。
+            </p>
+            
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" id="btnConfirmCancel">キャンセル</a>
+            <a href="#" class="btn btn-primary" id="btnConfirmOk">登録</a>
+        </div>
+    </div><!-- /div.modal -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/tranceparency.js"></script>
+</body>
+</html>
+

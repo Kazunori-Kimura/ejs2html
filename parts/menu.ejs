@@ -1,0 +1,14 @@
+<!--Sidebar content-->
+<div class="well sidebar-nav">
+    <ul class="nav nav-list">
+        <li <% if (currentPage == "menu"){ %>class="active"<% } %>><a href="/menu.html">メニュー</a></li>
+        <li class="nav-header">開示情報</li>
+        <li <% if (currentPage == "category1"){ %>class="active"<% } %>><a href="/category1.html">研究費開発費等</a></li>
+        <li <% if (currentPage == "category2"){ %>class="active"<% } %>><a href="/category2.html">学術研究助成費</a></li>
+        <li <% if (currentPage == "category3"){ %>class="active"<% } %>><a href="/category3.html">原稿執筆料等</a></li>
+        <li <% if (currentPage == "category4"){ %>class="active"<% } %>><a href="/category4.html">情報提示関連費</a></li>
+        <li <% if (currentPage == "category5"){ %>class="active"<% } %>><a href="/category5.html">その他の費用</a></li>
+        <li class="nav-header">データ取込み</li>
+        <li <% if (currentPage == "upload"){ %>class="active"<% } %>><a href="/upload.html">取込処理</a></li>
+    </ul>
+</div>
