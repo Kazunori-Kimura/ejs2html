@@ -1,0 +1,13 @@
+<span>費用科目: </span>
+<div class="btn-group">
+    <a href="#" class="btn dropdown-toggle" id="dropSubCategory" data-toggle="dropdown">
+        <span id="dropSubCategoryLabel">-- 選択してください --</span>
+        <span class="caret"></span>
+    </a>
+    <ul id="dropSubCategoryMenu" class="dropdown-menu" role="menu" aria-labelledby="dropSubCategory">
+    <% subCategories.forEach(function(item){ %>
+        <li><a href="#" data-value="<%= item.value %>"><%= item.name %></a></li>
+    <% }); %>
+    </ul>
+</div>
+

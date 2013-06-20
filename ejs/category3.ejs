@@ -1,0 +1,62 @@
+<% include parts/header %>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span2">
+                <% include parts/menu %>
+            </div>
+
+            <div class="span10">
+                <!--Body content-->
+                <div class="row-fluid">
+                    <div class="row">
+                        <div class="span3">
+                            <h3><%= categoryName %></h3>
+                        </div>
+                        <div class="span7">
+                            <div class="btn-group">
+                                <a href="#" class="btn dropdown-toggle" id="dropYear" data-toggle="dropdown">
+                                    <span id="dropYearLabel"><%= currentYear %>年度</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul id="dropYearMenu" class="dropdown-menu" role="menu" aria-labelledby="dropYear">
+                                <% years.forEach(function(y){ %>
+                                    <li><a href="#" data-value="<%= y %>"><%= y %>年度</a></li>
+                                <% }); %>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary">Web開示用データ出力</button>
+                            
+                            <% if ( isTwoStep ){ %>
+                            <button class="btn btn-info btnDetail" data-output-type="二段階開示用データ出力">明細データ出力</button>
+                            <% } %>
+                        </div>
+                    </div> <!-- /div.row -->
+                    <div class="row">
+                        <div class="span10">
+                            <% include parts/hiyou %>
+                        </div>
+                    </div> <!-- /div.row -->
+                </div>
+                
+                <% if (category == "category1"){ %>
+                    <% include parts/category1 %>
+                <% } else if (category == "category2"){ %>
+                    <% include parts/category2 %>
+                <% } else if (category == "category3"){ %>
+                    <% include parts/category3 %>
+                <% } else if (category == "category4"){ %>
+                    <% include parts/category4 %>
+                <% } else if (category == "category5"){ %>
+                    <% include parts/category5 %>
+                <% } %>
+
+            </div>
+        </div>
+    </div><!-- /div.container-fluid -->
+
+<% if ( isTwoStep ){ %>
+    <% include parts/dialog %>
+<% } %>
+
+<% include parts/footer %>

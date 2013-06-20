@@ -1,0 +1,81 @@
+<div id="modalConfirm" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 id="modal-title">二段階開示用データ出力</h3>
+    </div>
+    <div class="modal-body">
+        
+        <form class="form-horizontal" id="formSortOrder">
+
+            <!-- 出力件数 -->
+            <div class="control-group">
+                <div class="controls">
+                    <label class="radio inline">
+                        <input type="radio" name=rdLimit value="0" /> 全件
+                    </label>
+                    <label class="radio inline">
+                        <input id="setLimit" type="radio" name="rdLimit" value="1" /> 上位
+                    </label>
+                    <input class="input-small" id="txtLimitCount" type="text" /> 件
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="sortColumn0" class="control-label">並び順 1</label>
+                <div class="controls">
+                    <select id="sortColumn0">
+                        <option value=""></option>
+                        <option value="1">費用科目</option>
+                        <option value="2">御所属</option>
+                        <option value="3">御氏名</option>
+                        <option value="4">御役職</option>
+                        <option value="5">件数</option>
+                        <option value="6">金額 (源泉税込・消費税別)</option>
+                    </select>
+                    <label class="radio inline"><input type="radio" name="radio0" value="ASC" /> 昇順</label>
+                    <label class="radio inline"><input type="radio" name="radio0" value="DESC" /> 降順</label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="sortColumn1" class="control-label">並び順 2</label>
+                <div class="controls">
+                    <select id="sortColumn1">
+                        <option value=""></option>
+                        <option value="1">費用科目</option>
+                        <option value="2">御所属</option>
+                        <option value="3">御氏名</option>
+                        <option value="4">御役職</option>
+                        <option value="5">件数</option>
+                        <option value="6">金額 (源泉税込・消費税別)</option>
+                    </select>
+                    <label class="radio inline"><input type="radio" name="radio1" value="ASC" /> 昇順</label>
+                    <label class="radio inline"><input type="radio" name="radio1" value="DESC" /> 降順</label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="sortColumn2" class="control-label">並び順 3</label>
+                <div class="controls">
+                    <select id="sortColumn2">
+                        <option value=""></option>
+                        <option value="1">費用科目</option>
+                        <option value="2">御所属</option>
+                        <option value="3">御氏名</option>
+                        <option value="4">御役職</option>
+                        <option value="5">件数</option>
+                        <option value="6">金額 (源泉税込・消費税別)</option>
+                    </select>
+                    <label class="radio inline"><input type="radio" name="radio2" value="ASC" /> 昇順</label>
+                    <label class="radio inline"><input type="radio" name="radio2" value="DESC" /> 降順</label>
+                </div>
+            </div>
+
+        </form>
+        
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" id="btnConfirmCancel">キャンセル</a>
+        <a href="#" class="btn btn-primary" id="btnConfirmOk">明細出力</a>
+    </div>
+</div><!-- /div.modal -->

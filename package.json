@@ -1,0 +1,23 @@
+{
+  "name": "ejs2html",
+  "version": "0.0.0",
+  "description": "ejs -> html",
+  "main": "convert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kazunori-Kimura/ejs2html.git"
+  },
+  "keywords": [
+    "ejs",
+    "html"
+  ],
+  "author": "kazunori.kimura",
+  "license": "BSD",
+  "gitHead": "5f157f98f06e906767b04bfb9c91b328e0fabfbf",
+  "dependencies": {
+    "ejs": "~0.8.4"
+  }
+}

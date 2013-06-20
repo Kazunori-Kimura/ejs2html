@@ -1,0 +1,49 @@
+<% include parts/header %>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span2">
+                <% include parts/menu %>
+            </div>
+
+            <div class="span10">
+                <!--Body content-->
+                <div class="row-fluid">
+                    <div class="span2">
+                        <h4><%= categoryName %></h4>
+                    </div>
+                    <div class="span6">
+                        <% include parts/year %>
+                        <% if (typeof subCategories != "undefined"){ %>
+                            <% include parts/hiyou %>
+                        <% } %>
+                    </div>
+                    <div class="span2">
+                        <button class="btn btn-primary">Web開示用データ出力</button>
+                        <% if ( isTwoStep ){ %>
+                        <button class="btn btn-info btnDetail" data-output-type="二段階開示用データ出力">明細データ出力</button>
+                        <% } %>
+                    </div>
+                </div>
+                
+                <% if (category == "category1"){ %>
+                    <% include parts/category1 %>
+                <% } else if (category == "category2"){ %>
+                    <% include parts/category2 %>
+                <% } else if (category == "category3"){ %>
+                    <% include parts/category3 %>
+                <% } else if (category == "category4"){ %>
+                    <% include parts/category4 %>
+                <% } else if (category == "category5"){ %>
+                    <% include parts/category5 %>
+                <% } %>
+
+            </div>
+        </div>
+    </div><!-- /div.container-fluid -->
+
+<% if ( isTwoStep ){ %>
+    <% include parts/dialog %>
+<% } %>
+
+<% include parts/footer %>

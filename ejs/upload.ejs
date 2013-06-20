@@ -1,0 +1,71 @@
+<% include parts/header %>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span2">
+                <% include parts/menu %>
+            </div>
+
+            <div class="span10">
+                <!--Body content-->
+                <h3>開示情報&nbsp;取込処理</h3>
+                <hr />
+                <form class="form-horizontal" onsubmit="return false">
+                    <div class="control-group">
+                        <label class="control-label" for="txtYear">年度</label>
+                        <div class="controls">
+                            <input type="text" id="txtYear" placeholder="YYYY" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="selCategory">カテゴリー</label>
+                        <div class="controls">
+                            <select name="selCategory" id="selCategory">
+                                <option value="1">研究費開発費等</option>
+                                <option value="2">学術研究助成費</option>
+                                <option value="3">原稿執筆料等</option>
+                                <option value="4">情報提供関連費</option>
+                                <option value="5">その他の費用</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="fileExcel" class="control-label">アップロードファイル</label>
+                        <div class="controls"><input type="file" id="fileExcel" /></div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-info" id="btnUpload">アップロード</button>
+                    </div>
+                </form>
+            </div><!-- /div.span10 -->
+        </div>
+    </div><!-- /div.container-fluid -->
+
+    <!-- div.modal -->
+    <div id="modalConfirm" class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>開示情報登録</h3>
+        </div>
+        <div class="modal-body">
+            <p>以下の開示情報を登録します。</p>
+            
+            <ul>
+                <li>年度： 2013</li>
+                <li>カテゴリー： 研究費開発費等</li>
+            </ul>
+            
+            <p>登録処理を行う場合は
+            <span class="label label-info">登録</span>
+            を、中止する場合は
+            <span class="label">キャンセル</span> をクリックしてください。
+            </p>
+            
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" id="btnConfirmCancel">キャンセル</a>
+            <a href="#" class="btn btn-primary" id="btnConfirmOk">登録</a>
+        </div>
+    </div><!-- /div.modal -->
+
+<% include parts/footer %>

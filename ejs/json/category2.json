@@ -1,0 +1,14 @@
+{
+    "category": "category2",
+    "categoryName": "学術研究助成費",
+    "currentYear": "2012",
+    "years": ["2012", "2011", "2010"],
+    "isTwoStep": false,
+    "currentPage": "category2",
+    "subCategories": [
+        { "name": "奨学寄附金", "value": 1 },
+        { "name": "一般寄附金", "value": 2 },
+        { "name": "学会寄附金", "value": 3 },
+        { "name": "学会共催費", "value": 4 }
+    ]
+}
