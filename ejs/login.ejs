@@ -12,7 +12,7 @@
       }
 
       .form-signin {
-        max-width: 400px;
+        max-width: 480px;
         padding: 19px 29px 29px;
         margin: 0 auto 20px;
         background-color: #fff;
@@ -43,16 +43,43 @@
 </head>
 <body>
     <div class="container">
-
-      <form class="form-signin">
-        <h2 class="form-signin-heading">開示情報管理システム</h2>
-        <input type="text" class="input-block-level" placeholder="System ID">
-        <input type="password" class="input-block-level" placeholder="Password">
-        <button id="btnLogin" class="btn btn-primary">LOGIN</button>
-      </form>
-
+        <form class="form-signin form-horizontal">
+            <h2 class="form-signin-heading">開示情報管理システム</h2>
+            <hr>
+            <div class="control-group">
+                <label class="control-label" for="inputSystemId">
+                    SYSTEM ID
+                </label>
+                <div class="controls">
+                    <input type="text"
+                        id="inputSystemId"
+                        class="input-block-level"
+                        placeholder="System ID">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputPassword">
+                    PASSWORD
+                </label>
+                <div class="controls">
+                    <input type="password"
+                        id="inputPassword"
+                        class="input-block-level"
+                        placeholder="Password">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button id="btnLogin" class="btn btn-primary">
+                        LOGIN
+                    </button>
+                </div>
+            </div>
+            
+        </form>
     </div>
-    
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
     $(document).ready(function(){

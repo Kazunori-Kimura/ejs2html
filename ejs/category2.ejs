@@ -9,19 +9,21 @@
             <div class="span10">
                 <!--Body content-->
                 <div class="row-fluid">
-                    <div class="span2">
+                    <div class="span3">
                         <h4><%= categoryName %></h4>
                     </div>
-                    <div class="span6">
+                    <div class="span7">
                         <% include parts/year %>
-                        <% if (typeof subCategories != "undefined"){ %>
-                            <% include parts/hiyou %>
-                        <% } %>
-                    </div>
-                    <div class="span2">
-                        <button class="btn btn-primary">Web開示用データ出力</button>
+                        
+                        <button class="btn btn-primary">
+                            Web開示用データ出力
+                        </button>
+
                         <% if ( isTwoStep ){ %>
-                        <button class="btn btn-info btnDetail" data-output-type="二段階開示用データ出力">明細データ出力</button>
+                        <button class="btn btn-info btnDetail"
+                            data-output-type="二段階開示用データ出力">
+                            明細データ出力
+                        </button>
                         <% } %>
                     </div>
                 </div>

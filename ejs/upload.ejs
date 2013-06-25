@@ -12,13 +12,19 @@
                 <hr />
                 <form class="form-horizontal" onsubmit="return false">
                     <div class="control-group">
-                        <label class="control-label" for="txtYear">年度</label>
+                        <label class="control-label" for="txtYear">
+                            年度
+                        </label>
                         <div class="controls">
-                            <input type="text" id="txtYear" placeholder="YYYY" />
+                            <input type="text"
+                                id="txtYear"
+                                placeholder="YYYY" />
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label" for="selCategory">カテゴリー</label>
+                        <label class="control-label" for="selCategory">
+                            カテゴリー
+                        </label>
                         <div class="controls">
                             <select name="selCategory" id="selCategory">
                                 <option value="1">研究費開発費等</option>
@@ -30,13 +36,27 @@
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="fileExcel" class="control-label">アップロードファイル</label>
-                        <div class="controls"><input type="file" id="fileExcel" /></div>
+                        <label for="fileExcel" class="control-label">
+                            アップロードファイル
+                        </label>
+                        <div class="controls">
+                            <input type="file" id="fileExcel" />
+                        </div>
                     </div>
-                    <div class="form-actions">
-                        <button class="btn btn-info" id="btnUpload">アップロード</button>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button class="btn btn-info" id="btnUpload">
+                                アップロード
+                            </button>
+                        </div>
                     </div>
                 </form>
+
+                <hr>
+
+                <!-- 取込み状況 -->
+                <% include parts/import_logs %>
+
             </div><!-- /div.span10 -->
         </div>
     </div><!-- /div.container-fluid -->
